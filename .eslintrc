@@ -1,0 +1,41 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    // to enforce using type for object type definitions, can be type or interface
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/lines-between-class-members": [
+      "error",
+      "always",
+      { "exceptAfterOverload": true }
+    ],
+    "@typescript-eslint/no-useless-catch": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "quotes": ["error", "single"],
+    // we want to force semicolons
+    "semi": ["error", "always"],
+    // we use 2 spaces to indent our code
+    "indent": ["error", 2],
+    // we want to avoid extraneous spaces
+    "no-multi-spaces": ["error"]
+  }
+}
